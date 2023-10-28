@@ -24,15 +24,16 @@ This script is my first actually script, the code may be messy but its just some
 ## How to install
 - Drag the resource and mlo into your resources folder
 -add the following to \resources\[qb]\qb-core\shared\items.lua
-
+```
 -- Philly's Rooftop Bar
 ['beer_am'] 				 		= {['name'] = 'beer_am', 			  	  		['label'] = 'A.M. Japanese', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_am.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of AM Beer!'},
 ['beer_logger'] 				 		= {['name'] = 'beer_logger', 			  	  		['label'] = 'Logger American', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_logger.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of Logger!'},
 ['beer_piss'] 				 		= {['name'] = 'beer_piss', 			  	  		['label'] = 'Piswasser German', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_piss.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of Pisshwasser!'},
 ['beer_dusche'] 				 		= {['name'] = 'beer_dusche', 			  	  		['label'] = 'Dusche German', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_dusche.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of Dusche Gold!'},
 ['beer_patriot'] 				 		= {['name'] = 'beer_patriot', 			  	  		['label'] = 'Patriot American', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_patriot.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of Patriot!'},
-
+```
 -add the following to \resources\[qb]\qb-core\shared\jobs.lua : 
+```
 ['wiwang'] = {label = 'Wiwang', defaultDuty = true, offDutyPay = false,
 		grades = {
         	['0'] = {name = 'Barback', payment = 50},
@@ -41,16 +42,18 @@ This script is my first actually script, the code may be messy but its just some
             ['3'] = {name = 'Owner', payment = 105},
         },
 	},
-
-    -Add the following lines to \jim-consumables\config.lua under Consumables = {
-
+```
+    -Add the following lines to \jim-consumables\config.lua under Consumables 
+```
         --Philly Rooftop Bar
 		["beer_am"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["beer_logger"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["beer_piss"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["beer_dusche"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["beer_patriot"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
-
+```
     -Add the images from \ph_rooftopbar\html\images to \resources\[qb]\qb-inventory\html\images 
 	And Done!
 	Like I said this is a work in progress so it is a very simple bar job. Will be adding more drinks and other options soon!
+
+	
