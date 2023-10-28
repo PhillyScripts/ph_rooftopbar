@@ -13,16 +13,17 @@ https://discord.gg/Q8S4VYQWwB
 
 
 ## DEPENDENCIES
+```
 -QBCORE
 -Jim-Payments
 -Jim-Consumables
 -uniqx_wiwangtower (MLO)
-
+```
 ## INFO
 This script is my first actually script, the code may be messy but its just something I wanted to put out and keep working on to maybe get some feedback.
 
 ## How to install
-- Drag the resource and mlo into your resources folder
+- Drag the resource and mlo into your resources folder (MLO LOCATED IN MAPS FOLDER)
 -add the following to \resources\[qb]\qb-core\shared\items.lua
 ```
 -- Philly's Rooftop Bar
