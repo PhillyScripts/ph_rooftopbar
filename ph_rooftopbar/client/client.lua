@@ -193,8 +193,17 @@ CreateThread(function() -- Prop Spawning
 
     SetEntityHeading(object, 0.89)
 
-end)
+    if Config.DjBooth == true then 
+    local prop = "prop_50s_jukebox" --tray model hash
+    local  jukebox = CreateObject(prop, vector3(-810.39, -706.76, 122.42), true)
+    SetEntityHeading(jukebox, 269.74)
+    PlaceObjectOnGroundProperly(jukebox)
+    end
 
+end)
+--vector3(-822.69, -691.25, 123.42)
+
+--354.96
 
 
 end)

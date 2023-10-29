@@ -31,4 +31,19 @@ CreateThread(function()
         end
     end)
 
+
+    if Config.DjBooth == true then 
+    TriggerEvent("jim-djbooth:server:AddLocation",
+    { -- RooftopBar
+        job = "public",
+        enableBooth = true,
+        DefaultVolume = 0.15,
+        radius = 50,
+        coords = vec3(-810.39, -706.76, 123.42),
+        soundLoc = vec3(-818.56, -692.12, 123.42),
+    })
+end
+
+
+
 end)
