@@ -44,15 +44,17 @@ This script is my first actually script, the code may be messy but its just some
         },
 	},
 ```
-    -Add the images from \ph_rooftopbar\html\images to \resources\[qb]\qb-inventory\html\images 
-    - add the following to your server.cfg
+-Add the images from \ph_rooftopbar\html\images to \resources\[qb]\qb-inventory\html\images 
+ - Add the following to your server.cfg
     ```
     start jim-consumables
     start jim-payments
     start uniqx_wiwangtower
     start ph_rooftopbar
 ```
-	And Done!
-	Like I said this is a work in progress so it is a very simple bar job. Will be adding more drinks and other options soon!
+**MAKE SURE JIM-CONSUMABLES AND JIM-PAYMENTS ARE STARTED BEFORE ROOFTOP BAR**
+
+And Done!
+Like I said this is a work in progress so it is a very simple bar job. Will be adding more drinks and other options soon!
 
 	
