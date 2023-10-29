@@ -36,11 +36,11 @@ This script is my first actually script, the code may be messy but its just some
 -add the following to \resources\[qb]\qb-core\shared\jobs.lua : 
 ```
 ['wiwang'] = {label = 'Wiwang', defaultDuty = true, offDutyPay = false,
-		grades = {
+	grades = {
         	['0'] = {name = 'Barback', payment = 50},
-			['1'] = {name = 'Bartender', payment = 75},
-            ['2'] = {name = 'Manager', payment = 90},
-            ['3'] = {name = 'Owner', payment = 105},
+		['1'] = {name = 'Bartender', payment = 75},
+		['2'] = {name = 'Manager', payment = 90},
+		['3'] = {name = 'Owner', payment = 105},
         },
 	},
 ```
