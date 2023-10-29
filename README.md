@@ -44,16 +44,14 @@ This script is my first actually script, the code may be messy but its just some
         },
 	},
 ```
-    -Add the following lines to \jim-consumables\config.lua under Consumables 
-```
-        --Philly Rooftop Bar
-		["beer_am"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
-		["beer_logger"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
-		["beer_piss"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
-		["beer_dusche"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
-		["beer_patriot"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
-```
     -Add the images from \ph_rooftopbar\html\images to \resources\[qb]\qb-inventory\html\images 
+    - add the following to your server.cfg
+    ```
+    start jim-consumables
+    start jim-payments
+    start uniqx_wiwangtower
+    start ph_rooftopbar
+```
 	And Done!
 	Like I said this is a work in progress so it is a very simple bar job. Will be adding more drinks and other options soon!
 
