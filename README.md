@@ -17,8 +17,14 @@ https://discord.gg/Q8S4VYQWwB
 -QBCORE
 -Jim-Payments
 -Jim-Consumables
+-Jim-DJBooth (optional in Config)
+-xsound (needed for DJ Booth)
 -uniqx_wiwangtower (MLO)
 ```
+
+## Updates
+- Made the Beer Fridge only accessible to personnel ON DUTY
+- Add the option for jim-djbooth (will spawn a jukebox so guests can play music)
 ## INFO
 This script is my first actually script, the code may be messy but its just something I wanted to put out and keep working on to maybe get some feedback.
 
