@@ -80,8 +80,18 @@ RegisterNetEvent('ph_rooftop:Client:patriotBeer', function()
         TriggerServerEvent('ph-brewery:server:AddItem', "beer_patriot", 1)
     end)
 end)
-    
-    RegisterNetEvent('ph_rooftop:Client:BeerMenu', function()
+
+AddEventHandler('onResourceStart', function(resource) if GetCurrentResourceName() ~= resource then return end
+	QBCore.Functions.GetPlayerData(function(PlayerData)
+		PlayerJob = PlayerData.job
+		PlayerGang = PlayerData.gang
+		onDuty = PlayerJob.onduty
+	end)
+end)    
+
+RegisterNetEvent('ph_rooftop:Client:BeerMenu', function()
+    QBCore.Functions.TriggerCallback('ph_rooftopbar:CheckDuty', function(result)
+		if result then
         exports['qb-menu']:openMenu({
             {
                 header = "Wiwang Bar",
@@ -130,6 +140,10 @@ end)
                 }
             },
         })
+    else
+        QBCore.Functions.Notify("You are off duty")
+        return 
+    end
     
     end)
     
@@ -183,3 +197,4 @@ end)
 
 
 
+end)
