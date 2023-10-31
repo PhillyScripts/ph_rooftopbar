@@ -330,9 +330,30 @@ RegisterNetEvent('ph_rooftop:Client:boozeMenu', function()
     end)
     
 end)
---vector3(-822.69, -691.25, 123.42)
 
---354.96
+--create blip
+local blips = {
+ 
+	{title="Wiwang Rooftop Bar", colour=50, id=93, x=-818.23, y=-696.56, z=123.42},
+  }
+
+Citizen.CreateThread(function()
+
+    for _, info in pairs(blips) do
+      info.blip = AddBlipForCoord(info.x, info.y, info.z)
+      SetBlipSprite(info.blip, info.id)
+      SetBlipDisplay(info.blip, 4)
+      SetBlipScale(info.blip, 0.9)
+      SetBlipColour(info.blip, info.colour)
+      SetBlipAsShortRange(info.blip, true)
+	  BeginTextCommandSetBlipName("STRING")
+      AddTextComponentString(info.title)
+      EndTextCommandSetBlipName(info.blip)
+    end
+end)
+
+
+
 
 
 end)
