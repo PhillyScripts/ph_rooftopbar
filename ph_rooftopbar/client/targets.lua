@@ -2,9 +2,6 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 	QBCore.Functions.GetPlayerData(function(PlayerData)
 		PlayerJob = PlayerData.job
 	end)
-	if not ClipBoardSpawned then
-		SpawnClipBoard()
-	end
 end)
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
