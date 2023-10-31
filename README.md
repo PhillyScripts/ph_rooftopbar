@@ -59,12 +59,12 @@ This script is my first actual script, the code may be messy but its just someth
 -Add the images from \ph_rooftopbar\html\images to \resources\[qb]\qb-inventory\html\images 
  - Add the following to your server.cfg
     ```
-start rpemotes
-start jim-consumables
-start jim-payments
-start jim-djbooth
-start uniqx_wiwangtower
-start ph_rooftopbar
+	start rpemotes
+	start jim-consumables
+	start jim-payments
+	start jim-djbooth
+	start uniqx_wiwangtower
+	start ph_rooftopbar
 ```
 **USE THIS EXACT ORDER FOR YOUR SERVER.CFG**
 
