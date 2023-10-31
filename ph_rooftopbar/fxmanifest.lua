@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'Philly Scripts'
 
-description 'ph-brewery'
+description 'ph_rooftopbar'
 
 version '0.1'
 
@@ -22,6 +22,5 @@ shared_scripts{
 }
 
 server_scripts{
-    '@oxmysql/lib/MySQL.lua',
     'server/*.lua',
 }
