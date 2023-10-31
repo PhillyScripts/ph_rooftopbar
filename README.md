@@ -15,6 +15,7 @@ https://discord.gg/Q8S4VYQWwB
 ## DEPENDENCIES
 ```
 -QBCORE
+-qb-target
 -Jim-Payments
 -Jim-Consumables
 -Jim-DJBooth (optional in Config)
@@ -38,6 +39,10 @@ This script is my first actually script, the code may be messy but its just some
 ['beer_piss'] 				 		= {['name'] = 'beer_piss', 			  	  		['label'] = 'Piswasser German', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_piss.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of Pisshwasser!'},
 ['beer_dusche'] 				 		= {['name'] = 'beer_dusche', 			  	  		['label'] = 'Dusche German', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_dusche.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of Dusche Gold!'},
 ['beer_patriot'] 				 		= {['name'] = 'beer_patriot', 			  	  		['label'] = 'Patriot American', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'beer_patriot.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A bottle of Patriot!'},
+['vodkaglass']                        = {['name'] = 'vodkaglass',                          ['label'] = 'Vodka',           ['weight'] = 100,          ['type'] = 'item',         ['image'] = 'vodkaglass.png',                ['unique'] = true,          ['useable'] = true,      ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'A Glass of Vodka'},
+['whiskeyglass'] 				 		= {['name'] = 'whiskeyglass', 			  	  		['label'] = 'Whiskey', 					['weight'] = 1500, 		['type'] = 'item', 		['image'] = 'whiskeyglass.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A Glass of Whiskey'},
+['tequilaglass'] 				 		= {['name'] = 'tequilaglass', 			  	  		['label'] = 'Tequila', 					['weight'] = 1500, 		['type'] = 'item', 		['image'] = 'tequilaglass.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ['description'] = 'A Glass of Tequila'},
+['glasscup']                        = {['name'] = 'glasscup',                          ['label'] = 'Glass Cup',           ['weight'] = 100,          ['type'] = 'item',         ['image'] = 'glasscup.png',                ['unique'] = true,          ['useable'] = true,      ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'A glass cup'},
 ```
 -add the following to \resources\[qb]\qb-core\shared\jobs.lua : 
 ```
