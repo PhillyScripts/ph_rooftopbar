@@ -89,6 +89,66 @@ AddEventHandler('onResourceStart', function(resource) if GetCurrentResourceName(
 	end)
 end)    
 
+--Drink Events
+RegisterNetEvent('ph_rooftop:Client:vodka', function() --vodka
+   if QBCore.Functions.HasItem('glasscup') then
+     exports["rpemotes"]:EmoteCommandStart('mechanic', 1)
+    QBCore.Functions.Progressbar('abrir_vitrine', 'Pouring some vodka...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    
+        TriggerServerEvent('ph_rooftopbar:server:AddItem', "vodkaglass", 1)
+        TriggerServerEvent('ph_rooftopbar:server:RemoveCup', "glasscup", 1)
+    end)
+else
+    QBCore.Functions.Notify("You need a cup to pour!")
+end
+end)
+
+RegisterNetEvent('ph_rooftop:Client:whiskey', function() --whiskey
+    if QBCore.Functions.HasItem('glasscup') then
+      exports["rpemotes"]:EmoteCommandStart('mechanic', 1)
+     QBCore.Functions.Progressbar('abrir_vitrine', 'Pouring some whiskey...', 5000, false, true, {
+         disableMovement = true,
+         disableCarMovement = true,
+         disableMouse = false,
+         disableCombat = true,
+     }, {}, {}, {}, function()
+         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+     
+         TriggerServerEvent('ph_rooftopbar:server:AddItem', "whiskeyglass", 1)
+         TriggerServerEvent('ph_rooftopbar:server:RemoveCup', "glasscup", 1)
+     end)
+ else
+     QBCore.Functions.Notify("You need a cup to pour!")
+ end
+ end)
+
+ RegisterNetEvent('ph_rooftop:Client:tequila', function() --tequila
+    if QBCore.Functions.HasItem('glasscup') then
+      exports["rpemotes"]:EmoteCommandStart('mechanic', 1)
+     QBCore.Functions.Progressbar('abrir_vitrine', 'Pouring some tequila...', 5000, false, true, {
+         disableMovement = true,
+         disableCarMovement = true,
+         disableMouse = false,
+         disableCombat = true,
+     }, {}, {}, {}, function()
+         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+     
+         TriggerServerEvent('ph_rooftopbar:server:AddItem', "tequilaglass", 1)
+         TriggerServerEvent('ph_rooftopbar:server:RemoveCup', "glasscup", 1)
+     end)
+ else
+     QBCore.Functions.Notify("You need a cup to pour!")
+ end
+ end)
+
+
+
 RegisterNetEvent('ph_rooftop:Client:BeerMenu', function()
     QBCore.Functions.TriggerCallback('ph_rooftopbar:CheckDuty', function(result)
 		if result then
@@ -167,6 +227,22 @@ CreateThread(function() -- Prop Spawning
 
     SetEntityHeading(obj, 175.88)
 
+    Citizen.Wait(0)
+    while not NetworkIsSessionStarted() do
+        Citizen.Wait(0)
+    end
+    local laptop = "prop_laptop_01a"
+    if not HasModelLoaded(modelHash) then
+        RequestModel(modelHash)
+    while not HasModelLoaded(modelHash) do
+            Citizen.Wait(1)
+        end
+    end
+
+    local comp = CreateObject(laptop, vector3(-814.78, -688.25, 123.66), true)
+
+    SetEntityHeading(comp, 269.74)
+
     local signin = "prop_cash_depot_billbrd" --sign in board model hash
 
     if not HasModelLoaded(signin) then
@@ -200,6 +276,59 @@ CreateThread(function() -- Prop Spawning
     PlaceObjectOnGroundProperly(jukebox)
     end
 
+end)
+
+RegisterNetEvent('ph_rooftop:Client:grabGlass', function()
+    exports["rpemotes"]:EmoteCommandStart('mechanic', 1)
+    QBCore.Functions.Progressbar('abrir_vitrine', 'Taking a glass...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        TriggerServerEvent('ph-brewery:server:AddItem', "glasscup", 1)
+    end)
+end)
+
+RegisterNetEvent('ph_rooftop:Client:boozeMenu', function()
+    QBCore.Functions.TriggerCallback('ph_rooftopbar:CheckDuty', function(result)
+		if result then
+        exports['qb-menu']:openMenu({
+            {
+                header = "Wiwang Bar",
+                isMenuHeader = true,
+            },
+            {
+                header = "Vodka",
+                txt = "",
+                params = {
+                    event = "ph_rooftop:Client:vodka",
+                }
+            },
+            {
+                header = "Whiskey",
+                txt = "",
+                params = {
+                    event = "ph_rooftop:Client:whiskey",
+                }
+            },
+            {
+                header = "Tequila",
+                txt = "",
+                params = {
+                    event = "ph_rooftop:Client:tequila",
+                }
+            },
+            
+        })
+    else
+        QBCore.Functions.Notify("You are off duty")
+        return 
+    end
+    
+    end)
+    
 end)
 --vector3(-822.69, -691.25, 123.42)
 

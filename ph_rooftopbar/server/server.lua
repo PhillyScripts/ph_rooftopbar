@@ -8,6 +8,10 @@ CreateThread(function()
 		["beer_piss"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["beer_dusche"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["beer_patriot"] = { 			emote = "beer", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
+        ["vodkaglass"] = { 			emote = "whiskey", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
+        ["whiskeyglass"] = { 			emote = "whiskey", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
+        ["tequilaglass"] = { 			emote = "whiskey", 		canRun = false, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
+
 
 
     }
@@ -43,6 +47,21 @@ CreateThread(function()
         soundLoc = vec3(-818.56, -692.12, 123.42),
     })
 end
+
+--Adding Items to Iventory
+RegisterNetEvent('ph_rooftopbar:server:AddItem', function(item, amount)
+    local Player = QBCore.Functions.GetPlayer(source)
+
+    Player.Functions.AddItem(item, amount)
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], "add", amount)
+
+end)
+
+RegisterNetEvent ('ph_rooftopbar:server:RemoveCup', function(item, amount)
+    local Player = QBCore.Functions.GetPlayer(source)
+    Player.Functions.RemoveItem(item, amount)
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], "remove", amount)
+end)
 
 
 
